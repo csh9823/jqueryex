@@ -14,8 +14,60 @@
 		<li><strong>네번째 아이템입니다.</strong></li>
 		
 	</ul>
-	<input id="btn" type="button" VALUE="li요소추가" />
+	<button id="btn" type="button">li태그 추가버튼</button>
 </body>
 
+<script type="text/javascript">
+	
+	
+	
+	// ul안에 누른 li만 적용해주는법 버튼 눌러 생긴것도 적용됨
+	$("ul").on("click", "li", function(){
+	
+		var $this = $(this); // var $this 는 var abc와 같음
+		$this.text();
+		console.log($this.text());
+		$this.text("최현진")
+	
+	});
+	
+	
+	
+	/*
+	
+	ul전체가 한번에 잡힘
+	$("ul").on("click", function(){
+		
+		var tag = $(this);
+		tag.text();
+		console.log(tag.text());
+	
+	});
+	*/
+	
+	/*
+	버튼눌러 추가된곳에는 적용x
+	$("li").on("click",function(){
+	
+		var tag = $(this);
+		tag.text();
+		console.log(tag.text());
+		
+	});
+	*/
+	
+	
+	//버튼 눌렀을때 li 추가
+	
+	$("#btn").on("click", function(){
+		
+		$("ul").append("<li>다섯번째 아이템입니다</li>");
+		$("ul").append("<li>여섯번째 아이템입니다</li>");
+		$("ul").append("<li>일곱번째 아이템입니다</li>");
+		
+		
+	});
+	
+</script>
 
 </html>

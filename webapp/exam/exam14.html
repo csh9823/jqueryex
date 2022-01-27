@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -17,6 +17,27 @@
 
 </body>
 
+<script type="text/javascript">
+	
+	
+	//클릭시 황일영으로 교체
+	$("li").on("click",function(){
+		var tag = $(this);
+		tag.html("<strong>황일영</strong>");
+		//$(this).tag.text("황일영"); 이렇게 써도됨
+	});
+	
+	
+	// li중 어느것을 클릭 했는지 콘솔에 나타내줌
+	/*
+	$("li").on("click", function(){
+		var tag = $(this);
+		var tagId = tag.attr("id");  //아이디 값을 뽑아줌 없으면  li중 클릭한 것에 전체 값을 알려줌
+		console.log(tagId);
+		
+	});
+	*/
+</script>
 
 
 </html>
