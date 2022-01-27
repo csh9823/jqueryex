@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>자바스크립트</h1>
+</body>
+
+<script type="text/javascript">
+
+	//이름있는함수(기명,선언적함수) --> 정의 부분이 해석된다
+	//정의
+	function testA(){
+		console.log("testA()함수실행");
+		
+	}
+	
+	//testA 이룸, () 실행
+	//실행
+	testA(); //정의 부분이 아래 있어도 실행됨
+	
+	/*
+	//실행
+	testA();
+	
+	//정의
+	function testA(){
+		console.log("testA()함수실행");
+		
+	}
+	순서 이렇게 해줘도 실행됨
+	*/
+	
+	////////////////////////////////////////////////////////////////////////////
+	
+	//이름없는 함수(익명)
+	
+	//이름없는함수(익명함수) --> 실제로 이름이 없으면 사용할 수 없다.--> 변수에 할당
+	var testB = function(){
+		console.log("익명함수실행");
+	}
+	
+	//testB 변수이름 () 실행
+	testB(); //정의 부분이 아래 있으면 실행안됨
+	
+	/*
+	
+	//testB 변수이름 () 실행
+	testB(); //정의 부분이 아래 있으면 실행안됨
+	
+	var testB = function(){
+		console.log("익명함수실행");
+	}
+	
+	순서 바꾸면 실행 안됨
+	*/
+
+</script>
+</html>
